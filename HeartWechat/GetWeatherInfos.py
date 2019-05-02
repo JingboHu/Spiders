@@ -105,8 +105,6 @@ class getWeather:
             print('登录成功')
             return False
 
-
-
     def run(self):
         '''
         主运行入口
@@ -158,7 +156,6 @@ class getWeather:
 
             name_uuid = girlfriend.get('name_uuid')
             wechat_name = girlfriend.get('wechat_name')
-            # author = itchat.search_friends(name='小美女')[0]
 
             print(f'给{wechat_name}发送的内容是:\n{today_msg}')
 
@@ -232,11 +229,11 @@ class getWeather:
 
             future_seven_day_weather_information = '\n'.join(weather_information_lists)
 
-        send_seven_day_weather_messages = f"小美女呀，未来7天的天气分别是：\n " + future_seven_day_weather_information
+        send_seven_day_weather_messages = f"你要说的话" + future_seven_day_weather_information
 
         return  send_seven_day_weather_messages
 
-    def get_today_weather_info(self,dict_msg='',city_code='101200101', start_date_together = '2017-06-12',sweet_words='注意天气变化哦~ 爱你的小哥，嘿嘿~'):
+    def get_today_weather_info(self,dict_msg='',city_code='101200101', start_date_together = '2017-06-12',sweet_words='your sweet words'):
         '''
         获取天气信息。网址：https://www.sojson.com/blog/305.html
         :param dict_msg: 发送给朋友的信息
@@ -279,12 +276,12 @@ class getWeather:
             if start_date_together:
                 start_datetime = datetime.strptime(start_date_together,"%Y-%m-%d")
                 day_delta = (datetime.now() - start_datetime).days
-                delta_msg = f"小美女，这是我们在一起的第{day_delta}天。"
+                delta_msg = f"xxx，这是我们在一起的第{day_delta}天。"
             else:
                 delta_msg = ''
 
             today_notice = f"今天注意事项："
-            sweet_words = f"注意天气变化哦~ \n爱你的小哥，嘿嘿~ "
+            sweet_words = f"your sweet words"
 
             send_seven_day_weather_messages = self.get_seven_day_weather_info()
             today_msg = f"{today_date}\n{delta_msg}\n\n{send_seven_day_weather_messages}\n\n{today_notice}\n{notice}。\n{temperature}\n{wind}\n{aqi}\n\n{dict_msg}\n\n{sweet_words if sweet_words else ''}\n"
