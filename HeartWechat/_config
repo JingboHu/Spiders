@@ -19,7 +19,7 @@ girlfriend_infos:
       # 在一起时间(可空)
       start_date_together: '2017-06-12'
       # 消息的最后留言（可空）
-      sweet_words: '注意天气变化哦~ 爱你的小哥，嘿嘿~'
+      sweet_words: 'your sweet words'
 
   # 如果要发给多个人，参照这个格式，复制即可
 #  -
