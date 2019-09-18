@@ -214,8 +214,8 @@ class getWeather:
             return None
 
     def get_seven_day_weather_info(self):
-        # future_seven_day_weather_url = f'http://www.nmc.cn/publish/forecast/ASH/shanghai.html'
-        future_seven_day_weather_url = 'http://www.nmc.cn/publish/forecast/AHB/wuhan.html'
+        future_seven_day_weather_url = f'http://www.nmc.cn/publish/forecast/ASH/shanghai.html'
+        # future_seven_day_weather_url = 'http://www.nmc.cn/publish/forecast/AHB/wuhan.html'
         html = requests.get(future_seven_day_weather_url, headers=self.headers)
 
         if html.status_code == 200:

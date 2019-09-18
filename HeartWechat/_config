@@ -2,7 +2,7 @@
 #  https://ansible-tran.readthedocs.io/en/latest/docs/YAMLSyntax.html
 
 # 定时时间
-alarm_time: '9:20'
+alarm_time: '8:30'
 #alarm_time: '22:36' #test
 
 # 格言路径
@@ -15,7 +15,7 @@ girlfriend_infos:
       # 对象微信昵称
       wechat_name: '今夕何夕'
       # 对象所在城市名称
-      city_name: '武汉'
+      city_name: '上海'
       # 在一起时间(可空)
       start_date_together: '2017-06-12'
       # 消息的最后留言（可空）
