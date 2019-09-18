@@ -20,10 +20,8 @@ pattern = re.compile(patt,re.S)
 results = re.findall(pattern,html)
 
 itchat.auto_login(True)
-author = itchat.search_friends(name='小美女')[0]
-# for author in authors:
-# print(author)
-# author.send('小美女呀，未来7天的天气分别是：')
+author = itchat.search_friends(name="input your friend's wechat name")[0]
+
 weather_information_lists=[]
 for result in results:
     # print(result[0].replace('\n','').strip()+'\n'+result[1].replace('\n','').strip()+' \t '+result[2].replace('\n','').strip()+' \t '+result[3].replace('\n','').strip()+' \t '+result[4].replace('\n','').strip()+' \t '+result[5].replace('\n','').strip())
@@ -37,7 +35,7 @@ weather_information = '\n'.join(weather_information_lists)
 # current_time = time.localtime()
 
 # print(weather_information)
-send_messages = '小美女呀，未来7天的天气分别是：\n'+weather_information + '\n注意天气变化哦~\n'+'爱你的小哥，嘿嘿'
+send_messages = 'your words at the begining\n'+weather_information + 'your woeds in the end'
 print(send_messages)
 author.send(send_messages)
 
